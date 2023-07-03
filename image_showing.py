@@ -11,7 +11,6 @@ HEIGHT = im.shape[0]
 WIDTH_HALF = WIDTH // 2
 HEIGHT_HALF = HEIGHT // 2
 
-print(im[0][0][0])
 """
 Image representation in numpy is handled via *3D* arrays
 This can be verified by the print above, which returns a value
