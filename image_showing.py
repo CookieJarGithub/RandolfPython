@@ -3,6 +3,7 @@
 from numpy import *
 from matplotlib.pyplot import *
 from imageio import imread
+from PIL import Image
 
 im = imread("miku.jpg")
 
@@ -22,5 +23,7 @@ im_topleft = im[0 : HEIGHT_HALF, 0 : WIDTH_HALF]
 im_topright = im[0 : HEIGHT_HALF, WIDTH_HALF : WIDTH]
 im_bottomleft = im[HEIGHT_HALF : HEIGHT, 0 : WIDTH_HALF]
 im_bottomright = im[HEIGHT_HALF : HEIGHT, WIDTH_HALF : WIDTH]
+new_im = Image.fromarray(im_topleft)
+new_im.save("O&I/miku_topleft.jpg")
 imshow(im_topleft)
 # %%
