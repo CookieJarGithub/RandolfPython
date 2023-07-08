@@ -13,5 +13,9 @@ resize_normalize = transforms.Compose([
 
 SPICE = torchvision.datasets.ImageFolder('img',transform=resize_normalize)
 
-plt.imshow(SPICE[0][0].permute(1,2,0))
+random_img = np.random.randint(0, len(SPICE) - 1)
+
+labels = ['maybe usable', 'not usable', 'usable']
+plt.title(labels[SPICE[random_img][1]])
+plt.imshow(SPICE[random_img][0].permute(1,2,0))
 # %%
